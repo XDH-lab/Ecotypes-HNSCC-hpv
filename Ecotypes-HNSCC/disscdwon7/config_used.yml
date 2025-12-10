@@ -1,0 +1,39 @@
+default :
+  Input :    
+    Discovery dataset name : "disscdwon7"
+    Expression matrix : "../cell_exp.txt"    
+    Annotation file : "../cell_clin.txt" 
+    Annotation file column to scale by : NULL
+    Annotation file column(s) to plot : ["HPV"]
+    
+  Output :
+    Output folder : "../output"
+
+  Pipeline settings :
+    #Pipeline steps:
+    #   step 1 (extract cell type specific genes)
+    #   step 2 (cell state discovery on correrlation matrices)
+    #   step 3 (choosing the number of cell states)
+    #   step 4 (extracting cell state information)
+    #   step 5 (cell state re-discovery in expression matrices)
+    #   step 6 (extracting information for re-discovered cell states)
+    #   step 7 (cell state QC filter)
+    #   step 8 (ecotype discovery)
+    Pipeline steps to skip : [] 
+    # Accepted values: 
+    # "cell type specific" - select genes overexpressed in a cell type
+    # "no filter" - use all genes
+    # <integer> - e.g. 1000, select top <integer> genes with highest variance in a cell type
+    Filter genes : "cell type specific"
+    Number of threads : 32
+    Number of NMF restarts : 50
+    Maximum number of states per cell type : 7
+    Cophenetic coefficient cutoff : 0.975
+    #The p-value cutoff used for filtering non-significant overlaps in the jaccard matrix used for 
+    #discovering ecotypes in step 8. Default: 1 (no filtering).
+    Jaccard matrix p-value cutoff : 1
+    Minimum number of states in ecotypes : 3
+    
+
+
+

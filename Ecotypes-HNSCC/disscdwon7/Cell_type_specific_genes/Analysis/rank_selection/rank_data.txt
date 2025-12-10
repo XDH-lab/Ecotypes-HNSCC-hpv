@@ -1,0 +1,13 @@
+"CellType"	"Chosen_Rank"	"Redefined"
+"B_cells"	3	FALSE
+"CD4_T_cells"	4	TRUE
+"CD8_T_cells"	6	TRUE
+"Dendritic_cells"	5	TRUE
+"Endothelial_cells"	6	TRUE
+"Epithelial_cells"	6	FALSE
+"Fibroblasts"	6	FALSE
+"Mast_cells"	6	TRUE
+"Mono_Mac"	4	FALSE
+"Neutrophils"	5	TRUE
+"NK_cells"	6	TRUE
+"Plasma_cells"	4	TRUE
